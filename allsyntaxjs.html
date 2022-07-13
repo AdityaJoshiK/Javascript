@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Syntax</title>
+
+    <style>
+        .container{
+            color: black;
+            
+        }
+
+        #nav{
+            text-align: left;
+        }
+
+        #btn{
+            background-color: red;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>More</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet dolorum nostrum quaerat qui numquam consequuntur repellat placeat repudiandae error pariatur nemo explicabo veritatis ratione reiciendis magnam, quasi ducimus? Aliquid placeat pariatur eligendi corporis nemo qui quam maxime expedita! Tempore, perspiciatis! Ratione veritatis exercitationem hic vel doloribus quo, necessitatibus quae provident voluptatibus obcaecati omnis dolorum numquam cupiditate commodi magni harum maxime odio pariatur sint blanditiis. Illo asperiores fugit aliquid error temporibus sapiente ipsum voluptatibus veritatis blanditiis dolorum provident repudiandae maiores corporis doloribus placeat laboriosam, porro dolores laborum accusantium? Quia natus maxime impedit eius alias recusandae fuga rerum officia placeat quis. Itaque, dignissimos quibusdam? Autem consequuntur, eum aliquid et quis exercitationem eius sunt esse nemo beatae, odio alias cumque. Architecto tenetur esse iste reiciendis ipsum culpa assumenda corporis temporibus. Deleniti adipisci neque, iure nisi voluptas voluptates aut. Sed aspernatur distinctio aperiam tempore cupiditate amet eaque dolore nihil accusantium blanditiis! Id, repudiandae consequuntur sunt vitae soluta incidunt rerum excepturi, aliquam, illo animi omnis? Debitis laboriosam vel distinctio earum accusantium aperiam id, tempora architecto commodi recusandae quos iure minus nemo eveniet? Velit mollitia commodi natus exercitationem cumque nesciunt quidem saepe quae quos atque eius, blanditiis, fugiat necessitatibus dignissimos accusantium numquam ipsam. Nulla neque fuga sequi maiores expedita esse eveniet optio quia, eos a quaerat veritatis at quo cupiditate repellendus sunt quasi possimus dolores corporis voluptatibus temporibus accusantium harum doloribus doloremque! Dolores, dolorum excepturi!
+        </p>
+        <button id="btn" onclick="togglehide()">
+            Show/HIde
+        </button>
+    </div>
+
+    <div class="container">
+        Time IS <span id="time">
+    </span>
+    </div>
+</body>
+
+<script>
+var a=5;
+var b="Aditya"
+var num1=2;
+var num2=1;
+
+console.log(b);
+document.write(a);
+
+//Operators
+console.log("Sum Is "+ (num1+num2));
+console.log("Diff Is "+ (num1-num2));
+console.log("Divison IS "+(num1/num2));
+console.log("Multi Is "+(num1*num2));
+console.log("num1++ is "+(num1++));
+console.log("++num1 is "+(++num1));
+console.log("Power is "+(num1 ** num2));//Note:num1 value updated due to num1++
+
+//string
+var string='Thi"s'//Use Single Comma To USe Double Comma In String And Also for double comma
+
+console.log(string);
+
+var name="Aditya's";
+var channel=" Channel Name:GtaSaMods";
+var mess=" Aditya Is YouTuber";
+var temp=`${name} is a 'nice' Person "and" he has a YouTUbe Channel`//Use ` to use ' and " comma in string
+
+console.log(name+channel+mess);//or another method
+console.log(temp);
+
+//To Extract The NUmber Of Characters In A String
+var len=name.length;
+console.log(`Length Of Name is ${len}`);
+
+//Use \n To New Line
+console.log("Hello World\nAditya JOshi\tYouTUbe")//\t For Space
+
+//String Constructor
+var y=new String("Hii");
+console.log(y);
+
+//String Functions
+var str="This IS A String and is good";
+
+//First Occurance of a substring
+var position=str.indexOf('is');
+console.log(position);
+
+//Get Position From last
+position=str.lastIndexOf('is');
+console.log(position);
+
+//To Get A Substring From String
+var substr=str.slice(1,7);
+console.log(substr);
+
+//replace
+var replace=str.replace('String','Aditya');
+console.log(replace);
+
+//Upper and Lower Case
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+//To Remove Whitespaces
+var whitespace="  This    Is       A       Aditya         "//It Removes only front & rear whitespaces
+console.log(whitespace.trim());
+
+//Extract Any Character
+var char=str.charAt(1);
+console.log(char);
+
+console.log(str[3]);
+
+//use let aganist var
+let ab="anuthing";//Cannot redeclare it
+    {
+        let a="u6";
+        console.log(a);//a=u6 only in block        
+    }
+
+//Use Constant To Declare Constant Variable,it cannot changed
+const abc=5;
+// abc=12//You cannot do this
+    
+//if else(same as c)
+let age=19;
+
+if (age>=18) {
+    console.log("You Can Vote")
+}
+else{
+    console.log("You Cannot Vote")
+}
+
+//swith case(same as c)
+let z=5;
+
+switch (z) {
+    case 1:
+        console.log("z is 5")
+        break;
+
+    case 5:
+        console.log("z is 5")
+        break;    
+
+    default:
+        console.log("Try Again")
+        break;
+}
+
+//Creating Objects(Like Structure)
+let employee={
+    name: "Aditya",
+    salary: 200000,
+    channeLl: "GtaSaMods",
+    channel2: "Aditya Joshi",//If Required Space IN Channel2 like Channel 2 then use "Channel 2"
+    "channel 2": "Aditya"
+}
+console.log(employee)
+console.log(employee.channeLl)
+console.log(employee ['channel 2'])//Use This To Access Name With Space like channel 2
+
+//Arrays
+let names=[31,2,3,"Aditya"];
+console.log(names);
+console.log(names[1])//to print specific element of array
+
+let Arr=new Array(23);//It Creates 23 Size Array
+
+console.log(names.length);
+
+names=names.sort();//For SOrt ARray
+console.log(names);
+
+names.push("This Is Good");//To Add Element In Array
+console.log(names);
+
+//Functions(same as c)
+function greet(name,any) {
+    console.log(name+ " Is A Good Boy");
+    console.log(any+" "+name);
+}
+
+function sum(a,b,c) {
+    let d=a+b+c;
+    console.log(d);
+    return d;
+}
+
+function max(a,b,c) {
+    if (a>=b &  a>=c) {
+        return a;
+    }
+    else if (c>=a & c>=b) {
+        return c;
+    }
+    else{
+        return b;
+    }
+}
+
+function min(a,b,c) {
+    if (a<=b & a<=c) {
+        return a;
+    }
+    else if (c<=a & c<=b) {
+        return c;
+    }
+    else{
+        return b;
+    }
+}
+let name1="Aditya",name2="Jay",any="Good Morning";
+greet(name1,any);
+greet(name2,any);
+
+let g=1,h=2,l=3;
+
+console.log("Sum Is "+sum(g,h,l));
+console.log("Max Number Is "+max(g,h,l));
+console.log("Min Number Is "+min(g,h,l));
+
+//alert
+// alert("Please Fill The Form!")
+
+// //prompt
+// let na=prompt("What Is Your Name?")
+// console.log(na);
+
+// //confirm
+// let deletepost=confirm("Do You Want To Delte?");
+
+// if (deletepost) {
+//     console.log("Deleted");
+// }
+// else{
+//     console.log("Not Deleted");
+// }
+
+//Loops
+
+//For loop
+let friends=["Jay","Bhavin","Prashant","Keyur"]
+for (let i = 0; i < friends.length; i++) {
+    const element = friends[i];
+    console.log(element)
+}
+
+//foreach loop
+friends.forEach(function f(element) {
+    console.log("hello Friend "+element)
+})
+
+//forof loop
+for(element of friends){
+    console.log("Good Morning "+element)
+}
+
+//forin loop
+let employee1={
+    name: "Aditya",
+    salary: 5000000,
+    channel: "GtaSaMods"
+}
+
+//use this loop to iterate over objects 
+for ( key in employee1) {
+   console.log(`The ${key} of employee is ${employee1[key]}`)
+}
+
+//while loop(same as c)
+let i=0;
+
+while (i<4) {
+    console.log(`${i} is less than 4`)
+    i++
+}
+
+//do while loop
+let j=0;
+do{
+    console.log(`${j} is less than condition`)
+    j++
+}while(j<4)
+
+//DOM(Document Object MOdel)
+
+//get element by id from html
+let main=document.getElementById('main');
+console.log(main)
+console.log(main.innerHTML)//Easily Access Innerhtml(also use main.innerhtml to access in browser)
+
+let nav=document.getElementById('nav');
+console.log(nav)
+
+//get element with classname
+let container=document.getElementsByClassName('container');
+console.log(container)
+console.log(container[0])//We Can Access First Container With Classname container
+
+//find html elemenats with mathch css selector
+let sel=document.querySelector('.container');
+console.log("selector returns",sel)
+
+let sele=document.querySelectorAll('#nav');
+console.log(sele)
+
+let selec=document.querySelectorAll('#nav>li');
+console.log(selec)
+
+//Events
+//Browser Events
+//click
+//contextmenu
+//mouseover/mouseout
+//mousedown/mouseup
+//mousemove
+//submit
+//focus
+//DOmcontentloaded
+//etc......
+function togglehide() {
+let para=document.getElementById('para');
+let btn=document.getElementById('btn')
+if (para.style.display!='none') {
+    para.style.display='none';
+}
+else{
+    para.style.display='block';
+} 
+}
+
+//eventlistener
+// para.addEventListener('mouseover',function run() {
+//     console.log("mouse inside");
+// })
+
+// para.addEventListener('mouseout',function run() {
+//     console.log("Mouse Outside");
+// })
+
+//settimeout
+function newf(name,text) {
+    console.log("Hello Good Morning " +name+" "+text)
+}
+
+timeout=setTimeout(newf ,5000,"Aditya","Have a nice Day");//function run after time,here 5000ms is 5sec
+console.log(timeout);
+
+clearTimeout(timeout);//to clear settimeout means it can't print anything
+
+// setTimeout(newf(),5000);DOn't use ()
+
+//setInterval
+intervalid=setInterval(newf,1000,"Aditya","Good")//It RUns Repeately in 1sec period
+
+clearInterval(intervalid)//it clear setinterval
+
+//Function To Displey Time
+// function displaytime() {
+//     time=new Date();
+//     console.log(time);
+//     document.getElementById('time').innerHTML=time
+// }
+// setInterval(displaytime,1000);
+
+//Date & Time
+let now=new Date();//Current Date & TIme
+console.log(now);
+
+let dt=new Date(1000)//It GIves time after 1000ms
+console.log(dt);
+
+let newDate=new Date("2029-09-30");//intialize the date of any time
+console.log(newDate);
+
+//another way to initialize Date
+//Date(year,month,date,hours,miniutes,seconds)
+let nDate=new Date(3020,4,6,9,3,2);
+console.log(nDate);
+
+//Functions To Know Date,month,year,seconds,time
+let yr=newDate.getFullYear();
+console.log(yr);
+
+let dat=newDate.getDate();
+console.log(dat);
+
+let mon=newDate.getMonth();
+console.log(mon);
+
+let hours=newDate.getHours();
+console.log(hours);
+
+//Set Date & Time
+newDate.setDate(9);
+newDate.setMinutes(25);
+console.log(newDate);
+setInterval(updatetime,1000);
+function updatetime() {  //time clock usind date function
+    time.innerHTML=new Date();
+}
+
+//Arrow Function
+function fun() {
+    console.log("Good MOrning");
+}
+fun();
+
+//this function with help of arrow function
+let func=()=>{
+    console.log("Good MOrning Using Arrow Function");
+}
+func();
+
+//It Is Also USe IN Settimeout
+setTimeout(() => {
+    console.log("It Works");
+}, 3000);
+
+//arrow function for sum
+let sum1=(a,b)=>{
+    return a+b;
+}
+console.log(sum1(1,2));
+
+//shortway to use this
+let sum2=(a,b)=>a+b;// nO required to use return
+console.log(sum2(2,3));
+
+let half=a=>a/2;//If One Argument then () it not required if more than 2 than use ()
+console.log(half(5));
+
+let obj1={
+    names:["Aditya","Harshil","JAy"],
+    speak(){
+        this.names.forEach((student)=>{  //this means function name(speak)
+            console.log("Hello "+student);
+        });
+    }
+}
+obj1.speak();
+
+let obj2={
+    greting: "Good MOrning",
+    names:["Aditya","Harshil","JAy"],
+    speak(){
+        this.names.forEach((student)=>{  //this means function name(speak)
+            console.log(this.greting+" Have A Good Day "+student);
+        });
+    }
+}
+obj2.speak();
+
+
+//math functions
+let m=Math;
+console.log(m);//we get list of all math functions
+
+//Printing the constants from math object
+console.log("Value OF Math.E :",Math.E);
+console.log("Value OF Math.PI :",Math.PI);
+console.log("Value OF Math.LN2 :",Math.LN2);
+console.log("Value OF Math.SQRT1_2 :",Math.SQRT1_2);
+console.log("Value OF Math.LOG2E :",Math.LOG2E);
+
+//ROUNDED VALUE
+let a2=34.6356565
+let b2=56
+
+console.log("a and b is ",a2,b2);
+console.log("Rounded a and b is ",Math.round(a2),Math.round(b2));
+
+//ceil and floor
+console.log("Rounded up to nearest Value OF a",Math.ceil(a2));
+console.log("Rounded Down To Nearest Value OF a",Math.floor(a2));
+
+//Trigonometric Function
+console.log("Sin(pi):",Math.sin(Math.PI));
+console.log("tan(pi/2):",Math.tan(Math.PI/2));
+console.log("cos(pi):",Math.cos(Math.PI));
+
+//find min and max
+console.log("4,5,6 Min Is:",Math.min(4,5,6));
+console.log("4,5,6 Max Is:",Math.max(4,5,6));
+
+//generate random number
+let r=Math.random();//Generates Random Num. Between 0-1
+console.log("Random Number Is:",r);
+
+//For Custom Range(Here 50-60)
+let a1=50;
+let b1=60;
+let random=a1+(b1-a1)*Math.random();//formula
+console.log("Random NUmber Is:",random);
+
+//JSON
+let jsonObj={ //it cretates simple object
+    name:"Aditya",
+    channel:"xyz",
+    friend: "Bhavin"
+}
+console.log(jsonObj);
+
+//Using JSON We Can COnvert It Into String
+let myJsonstr=JSON.stringify(jsonObj);
+console.log(myJsonstr);
+
+myJsonstr=myJsonstr.replace('xyz','GtaSaMods');//also edit string
+console.log(myJsonstr);
+
+newJsonObj=JSON.parse(myJsonstr);//Convert Back To Object
+console.log(newJsonObj);
+</script>
+</html>

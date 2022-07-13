@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeingivenrange</title>
+</head>
+<body>
+    <script>
+        let num1=parseInt(prompt("Enter Number 1:"));
+        let num2=parseInt(prompt("Enter Number 2:"));
+
+        document.write(num1+"<br>");
+        document.write(num2+"<br>");
+
+        let count=0;
+
+        document.write("Going to Loop <br>");
+
+        for(i=num1;i<=num2;i++)
+        {
+            document.write("INside Loop <br>");
+            for(j=1;j<=i;j++)
+            {
+                document.write("Inside j loop <br>");
+                if (i%j==0) {
+                    document.write("INside If In j");
+                    count++;
+                    document.write(i+"<br>");
+                }
+            }
+            document.write("Outside j loop <br>");
+
+            if (count>0) {
+                document.write("Inside if condition of count");
+            document.write(i+"<br>");
+            }
+
+            count=0;
+        }
+
+        document.write("Outside loop <br>");
+    </script>
+</body>
+</html>
